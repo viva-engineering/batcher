@@ -8,7 +8,7 @@ interface Result {
 	age: number;
 }
 
-class MyBatcher extends Batcher<number, void, Result> {
+class MyBatcher extends Batcher<number, Result> {
 	async _makeRequest(requests) {
 		const results: BatchResult<Result> = { };
 		const requestedIds = requests.map(x => x.params);
