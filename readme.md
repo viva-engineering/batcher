@@ -9,7 +9,7 @@ interface Result {
 }
 
 class MyBatcher extends Batcher<number, Result> {
-	async _makeRequest(requests) {
+	async makeRequest(requests) {
 		const results: BatchResult<Result> = { };
 		const requestedIds = requests.map(x => x.params);
 		const resultFromSomewhere: Result[] = await getResultFromSomewhere(requestedIds);
