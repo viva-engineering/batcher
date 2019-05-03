@@ -72,7 +72,7 @@ export abstract class Batcher<Params, Result> {
 	}
 
 	/**
-	 * Determines the request key used for de-duplicating concurrent requests. If no overriden
+	 * Determines the request key used for de-duplicating concurrent requests. If not overriden
 	 * by the child class, this defaults to just returning `String(params)`.
 	 *
 	 * @param params The request to generate a key for
