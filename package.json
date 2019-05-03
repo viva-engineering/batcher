@@ -1,0 +1,26 @@
+{
+  "name": "@viva-eng/batcher",
+  "version": "1.0.0",
+  "description": "A utility for batching operations",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc --build tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viva-engineering/batcher.git"
+  },
+  "keywords": [
+    "http-client"
+  ],
+  "author": "James Brumond <james@jbrumond.me> (http://www.jbrumond.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viva-engineering/batcher/issues"
+  },
+  "homepage": "https://github.com/viva-engineering/batcher#readme",
+  "devDependencies": {
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.4000"
+  }
+}
