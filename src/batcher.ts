@@ -5,6 +5,10 @@ interface BatchDict<Params, Result> {
 	[batchKey: string]: Batch<Params, Result>;
 }
 
+interface DeferredDict<T> {
+	[requestKey: string]: Deferred<T>
+}
+
 interface BatchRunner<Params, Result> {
 	(requests: RequestWrapper<Params>[]): Promise<BatchResult<Result>>;
 }
@@ -144,9 +148,7 @@ class Batch<Params, Result> {
 	protected timeout: number;
 	protected requests: RequestWrapper<Params>[] = new Array(this.maxSize);
 	protected nextIndex: number = 0;
-	protected deferreds: {
-		[requestKey: string]: Deferred<Result>
-	}
+	protected deferreds: DeferredDict<Result> = { };
 	
 	/** Is set to true once the batch starts processing to prevent new items from being added */
 	public isClosed: boolean = false;
